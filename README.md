@@ -3,7 +3,7 @@
 
 
 本开源库提供了一种快速实现pytorch自定义算子的方式  
-并且自定义算子同时支持cuda和cpu，自带方向梯度传播  
+并且自定义算子同时支持cuda和cpu，自带梯度反向传播  
 This open-source library provides a fast way to implement custom operators in PyTorch.  
 It supports both CUDA and CPU, and includes automatic gradient propagation.
 <br />
