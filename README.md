@@ -88,7 +88,7 @@ full example code can be find in example1
 ```
 
 <br />
-这种实现方式，主要是为了便利性，在性能和显存使用上有很大的问题。大点的项目推荐JAX  
+这种实现方式，主要是为了便利性，在性能和显存使用上有很大的问题。大点的项目推荐JAX <br />
 This implementation method is mainly for convenience, but it has significant issues with performance and memory usage. For larger projects, JAX is recommended.
 
   
