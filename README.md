@@ -48,5 +48,11 @@ CusLayer<1>::apply 中的 1 就是之前定义的函数 id
 the 1 is the function ID that was defined earlier.  
 <br />
 
+<br />
+full example code can be find in example1
+
+
+
+
   
 
