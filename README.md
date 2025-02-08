@@ -49,8 +49,43 @@ the 1 is the function ID that was defined earlier.
 <br />
 
 <br />
-full example code can be find in example1
+full example code can be find in example1 
 
+```
+
+	double lrate = 1e-4;
+	tr::optim::Adam opt({x}, tr::optim::AdamOptions(lrate));
+
+	for (int i = 0; true; i++)
+	{
+		opt.zero_grad();
+
+		TMat y = CusLayer<1>::apply(x);
+
+
+		TMat er = (y - y_dst).norm();
+
+		er.backward();
+		opt.step();
+
+		
+
+		if (i % 1000 == 0) {
+			std::cout << "----------------: " << i << std::endl;
+			std::cout << "x: " << x << std::endl;
+			std::cout << "y: " << y << std::endl;
+			std::cout << "er: " << er << std::endl;
+			std::cout << ""<<std::endl;
+		}
+
+		if (to_double(er) < 1e-4) {
+			std::cout << "+++ opt finish ++" << std::endl;
+			break;
+		}
+
+	}
+
+```
 
 
 
